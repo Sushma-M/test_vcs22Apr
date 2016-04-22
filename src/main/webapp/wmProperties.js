@@ -1,5 +1,5 @@
 var _WM_APP_PROPERTIES = {
-  "activeTheme" : "default",
+  "activeTheme" : "passion",
   "defaultLanguage" : "en",
   "displayName" : "Test_VCS1",
   "homePage" : "Main",
