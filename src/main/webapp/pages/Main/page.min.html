@@ -19,6 +19,13 @@ Application.$controller("MainPageController", ["$scope", function ($scope) {
     };
 
 }]);
+
+Application.$controller("grid1Controller", ["$scope",
+	function($scope) {
+		"use strict";
+		$scope.ctrlScope = $scope;
+	}
+]);
 </script>
 <script id="Main.variables.json">
 var _MainPage_Variables_ ={ }
@@ -43,6 +50,18 @@ var _MainPage_Variables_ ={ }
                 </wm-container>
             </wm-composite>
             <wm-button class="btn-default" caption="Button" type="button" name="button1"></wm-button>
+            <wm-grid readonlygrid="true" dataset="bind:Variables.GoogleapisInvoke.dataSet" navigation="Basic" name="grid1">
+                <wm-grid-column binding="status" caption="Status" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                <wm-grid-column binding="route.summary" caption="Route Summary" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                <wm-grid-column binding="route.bounds.southwest.lng" caption="Route.bounds.southwest Lng" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                <wm-grid-column binding="route.bounds.southwest.lat" caption="Route.bounds.southwest Lat" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                <wm-grid-column binding="route.bounds.northeast.lng" caption="Route.bounds.northeast Lng" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                <wm-grid-column binding="route.bounds.northeast.lat" caption="Route.bounds.northeast Lat" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                <wm-grid-column binding="route.leg.duration.text" caption="Route.leg.duration Text" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                <wm-grid-column binding="route.leg.duration.value" caption="Route.leg.duration Value" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                <wm-grid-column binding="route.leg.distance.text" caption="Route.leg.distance Text" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                <wm-grid-column binding="route.leg.distance.value" caption="Route.leg.distance Value" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+            </wm-grid>
         </wm-page-content>
         <wm-right-panel name="rightpanel" content="rightnav" columnwidth="2"></wm-right-panel>
     </wm-content>
